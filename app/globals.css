@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0e1420;
+  --color-surface: #161f2e;
+  --color-primary: #f2f5f9;
+  --color-muted: #8a97a8;
+  --color-accent: #3e8bff;
+  --color-warm: #ffb454;
+  --color-line: rgba(36, 48, 66, 0.9);
+
+  --font-display: var(--font-sora), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+
+  --spacing-content: 72rem;
+}
+
+:root {
+  --bg-primary: #0e1420;
+  --bg-surface: #161f2e;
+  --text-primary: #f2f5f9;
+  --text-muted: #8a97a8;
+  --accent: #3e8bff;
+  --accent-warm: #ffb454;
+  --border: rgba(36, 48, 66, 0.9);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+}
+
+/* Logo marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+.marquee-track-reverse {
+  animation: marquee-reverse 40s linear infinite;
+}
+.marquee-wrap:hover .marquee-track,
+.marquee-wrap:hover .marquee-track-reverse {
+  animation-play-state: paused;
+}
+
+/* Explicit utility overrides for Tailwind v4 compatibility */
+.max-w-content {
+  max-width: 72rem;
+}
+
+.font-display {
+  font-family: var(--font-sora), sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.bg-bg {
+  background-color: #0e1420;
+}
+
+.bg-surface {
+  background-color: #161f2e;
+}
+
+.bg-surface\/40 {
+  background-color: rgba(22, 31, 46, 0.4);
+}
+
+.text-accent {
+  color: #3e8bff;
+}
+
+.text-warm {
+  color: #ffb454;
+}
+
+.text-muted {
+  color: #8a97a8;
+}
+
+.text-primary {
+  color: #f2f5f9;
+}
+
+.border-line {
+  border-color: rgba(36, 48, 66, 0.9);
+}
+
+.border-accent {
+  border-color: #3e8bff;
+}
+
+.bg-accent {
+  background-color: #3e8bff;
+}
+
+.bg-bg\/80 {
+  background-color: rgba(14, 20, 32, 0.8);
+}
+
+.hover\:border-accent\/50:hover {
+  border-color: rgba(62, 139, 255, 0.5);
+}
+
+.focus\:border-accent:focus {
+  border-color: #3e8bff;
+}
