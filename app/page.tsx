@@ -7,6 +7,7 @@ import BeforeAfterToggle from "@/components/BeforeAfterToggle";
 import RoiCalculator from "@/components/RoiCalculator";
 import CaseStudies from "@/components/CaseStudies";
 import WhyWorkWithMe from "@/components/WhyWorkWithMe";
+import ReelsShowcase from "@/components/ReelsShowcase";
 import Portfolio from "@/components/Portfolio";
 import Process from "@/components/Process";
 import Skills from "@/components/Skills";
@@ -27,6 +28,7 @@ export default function Home() {
       <RoiCalculator />
       <CaseStudies />
       <WhyWorkWithMe />
+      <ReelsShowcase />
       <Portfolio />
       <Process />
       <Skills />
